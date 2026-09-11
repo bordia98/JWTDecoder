@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Decode and inspect JSON Web Tokens locally in your browser. No tokens are sent, stored, or logged.">
+  <meta name="keywords" content="JWT decoder, JSON Web Token decoder, JWT inspector, decode token locally"><meta name="robots" content="index, follow"><meta name="google-site-verification" content="CTKB_9txeXMrLSuYICR1B_pjmvU8wR2KuNNo4pZdVQM"><meta name="theme-color" content="#f8fafc">
+  <meta property="og:type" content="website"><meta property="og:title" content="JWT Decoder — inspect tokens locally"><meta property="og:description" content="A private, browser-only JSON Web Token decoder. Nothing leaves your device."><meta property="og:site_name" content="JWT Decoder">
+  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="JWT Decoder — inspect tokens locally"><meta name="twitter:description" content="Decode JSON Web Tokens privately, in your browser.">
+  <link rel="canonical" href="https://bordia98.github.io/JWTDecoder/"><link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Cpath d='M18 21h14M18 32h28M32 43h14' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"><title>JWT Decoder — Inspect tokens privately</title>
+</head>
+<body>
+  <a class="skip-link" href="#decoder">Skip to decoder</a>
+  <header class="site-header"><a class="brand" href="./" aria-label="JWT Decoder home"><span class="brand-mark" aria-hidden="true">{ }</span>JWT Decoder</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">◐</span><span class="theme-label">Dark</span></button></header>
+  <main id="decoder">
+    <section class="hero" aria-labelledby="page-title"><p class="eyebrow">Private by design</p><h1 id="page-title">Understand your JWT,<br><em>without sending it anywhere.</em></h1><p class="intro">Paste a JSON Web Token to decode its header and payload right in your browser. This tool never transmits, saves, or logs your token.</p></section>
+    <section class="workspace" aria-label="JWT decoder">
+      <div class="input-panel"><div class="panel-heading"><label for="token">Encoded token</label><button class="text-button" id="clear" type="button">Clear</button></div><textarea id="token" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Paste a JSON Web Token here…" aria-describedby="input-help"></textarea><p id="input-help" class="input-help"><span aria-hidden="true">⌁</span> Decoded locally. Your token stays on this device.</p><p class="error" id="error" role="alert" hidden></p></div>
+      <div class="results" aria-live="polite"><article class="result-card"><div class="card-title"><span class="dot blue"></span><h2>Header</h2><button class="copy-button" type="button" data-copy="header-output" disabled>Copy</button></div><pre id="header-output"><code>// Token header will appear here</code></pre></article><article class="result-card"><div class="card-title"><span class="dot purple"></span><h2>Payload</h2><button class="copy-button" type="button" data-copy="payload-output" disabled>Copy</button></div><pre id="payload-output"><code>// Token payload will appear here</code></pre></article></div>
+    </section>
+    <section class="claims" id="claims" hidden aria-labelledby="claims-title"><div><p class="eyebrow">Token details</p><h2 id="claims-title">Registered claims</h2></div><dl id="claims-list"></dl></section>
+    <section class="notice" aria-label="Security notice"><span aria-hidden="true">✦</span><p><strong>Decode, don’t verify.</strong> This shows what a JWT contains; it does not verify its signature or prove the token is trustworthy. Never share a production token with anyone.</p></section>
+  </main>
+  <footer><p>Built for clarity and privacy. Open source and static by nature.</p><a href="https://github.com/bordia98/JWTDecoder" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></footer><div class="toast" id="toast" role="status" aria-live="polite"></div><script src="script.js"></script>
+</body></html>
